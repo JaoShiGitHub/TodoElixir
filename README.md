@@ -15,8 +15,6 @@
   * Run `mix phx.server` or inside IEx with `iex -S mix phx.server`
   * Go to [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
 ## Learn More
 
   * Elixir Document: [https://hexdocs.pm/elixir/Kernel.html#content](https://hexdocs.pm/elixir/Kernel.html#content)
