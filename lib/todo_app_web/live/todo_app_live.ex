@@ -102,17 +102,17 @@ defmodule TodoAppWeb.TodoAppLive do
     ~H"""
     <main class={"font-josefinSans w-full flex flex-col text-grey_11 items-center min-h-screen" <> if @light_mode, do: " bg-gb_11", else: " bg-blue_00" }>
      <img
-        class="absolute w-full"
+        class="absolute w-full h-full max-h-[35vh] md:max-h-[33vh] object-cover object-center"
         src={if @light_mode, do: "/images/bg-desktop-light.jpg", else: "/images/bg-desktop-dark.jpg"}
         alt="Background Image" />
-      <div class="relative top-0 mt-20 w-full max-w-[580px]">
+      <div class="relative top-0 mt-12 md:mt-20 px-10 md:px-0 w-full max-w-[580px]">
         <header class="w-full flex justify-between">
           <h1 class="text-4xl font-bold tracking-[0.6em]">TODO</h1>
           <button phx-click="light_mode">light btn</button>
         </header>
 
         <div>
-          <section class={"mb-8 mt-12 flex h-16 items-center gap-x-5 p-5 rounded-md" <> if @light_mode, do: " bg-grey_11", else: " bg-desaturated_blue00"}>
+          <section class={"mb-6 mt-12 flex h-16 items-center gap-x-5 p-5 rounded-md" <> if @light_mode, do: " bg-grey_11", else: " bg-desaturated_blue00"}>
             <div class="w-7 h-7 border border-gb_0 rounded-full"></div>
             <form phx-submit="enter_pressed" class="w-full">
               <input
@@ -164,7 +164,7 @@ defmodule TodoAppWeb.TodoAppLive do
                 <button class={(if @light_mode, do: "hover:text-gb_001 ", else: "hover:text-white ") <> (if @show_completed, do: " text-brightBlue", else: "")} phx-click="show_completed">Completed</button>
               </div>
 
-              <button class={if @light_mode, do: "hover:text-gb_001 ", else: "hover:text-white "} phx-click="clear_completed">Clear completed</button>
+              <button class={ if @light_mode, do: "hover:text-gb_001 ", else: "hover:text-white "} phx-click="clear_completed">Clear completed</button>
             </div>
           </section>
         </div>
